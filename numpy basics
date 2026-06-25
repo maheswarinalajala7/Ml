@@ -1,0 +1,387 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "035400b9-650d-4bc0-8e1d-6b5db22713ad",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, Jupyter!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hello, Jupyter!\")\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "84aec8b9-f022-4223-af93-2117e964a809",
+   "metadata": {},
+   "source": [
+    "import numpy as np\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "148f89e2-7599-41e0-891c-650c0c5ff0ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 3 4 5]\n",
+      "[[1 2 3]\n",
+      " [4 5 6]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "# Creating a 1D array\n",
+    "arr = np.array([1, 2, 3, 4, 5])\n",
+    "print(arr)\n",
+    "# Creating a 2D array\n",
+    "arr_2d = np.array([[1, 2, 3], [4, 5, 6]])\n",
+    "print(arr_2d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "a1c6f04c-e0b4-4507-95b3-4dac4b8eb017",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.141592653589793\n",
+      "<class 'numpy.float64'>\n",
+      "float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "np.float64\n",
+    "import numpy as np\n",
+    "\n",
+    "# Create a float64 number\n",
+    "x = np.float64(3.141592653589793)\n",
+    "\n",
+    "print(x)          # 3.141592653589793\n",
+    "print(type(x))    # <class 'numpy.float64'>\n",
+    "print(x.dtype)    # float64\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "2de61ae1-27a2-47e3-880b-e064777d9efd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original: [-1 -2  3 -4  5]\n",
+      "Absolute: [1 2 3 4 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "arr_int = np.array([-1, -2, 3, -4, 5], dtype=np.int32)\n",
+    "print(\"Original:\", arr_int)\n",
+    "print(\"Absolute:\", np.absolute(arr_int))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "69698b46-a250-47f0-879b-9d1938a4cd58",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5 7 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "arr1 = np.array([1, 2, 3])\n",
+    "arr2 = np.array([4, 5, 6])\n",
+    "print(np.add(arr1, arr2))   # [5 7 9]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "3d893b40-acca-4fee-b587-a89a005f8a54",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original: [-1 -2  3 -4  5]\n",
+      "Absolute: [1 2 3 4 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "np.absolute\n",
+    "import numpy as np\n",
+    "\n",
+    "arr_int = np.array([-1, -2, 3, -4, 5], dtype=np.int32)\n",
+    "print(\"Original:\", arr_int)\n",
+    "print(\"Absolute:\", np.absolute(arr_int))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "115361b3-e0ca-4ad8-86a8-35208cd9ef68",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "dc5a299b-c20c-4462-aa41-93c81d5d6ba3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0   -1\n",
+      "1   -2\n",
+      "2    3\n",
+      "3   -4\n",
+      "4    5\n",
+      "dtype: int64\n",
+      "Absolute values:\n",
+      " 0    1\n",
+      "1    2\n",
+      "2    3\n",
+      "3    4\n",
+      "4    5\n",
+      "dtype: int64\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "\n",
+    "s = pd.Series([-1, -2, 3, -4, 5])\n",
+    "print(s)\n",
+    "print(\"Absolute values:\\n\", s.abs())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "d10e95ef-68a4-41ca-8681-281de2a85c88",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Index([10, 20, 30], dtype='int64')\n"
+     ]
+    }
+   ],
+   "source": [
+    "pd.Index\n",
+    "idx = pd.Index([10, 20, 30])\n",
+    "print(idx)        # Int64Index([10, 20, 30], dtype='int64')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "b1255745-51cd-4878-9acb-581617bb3f19",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Index([10, 20, 30], dtype='int64')\n"
+     ]
+    }
+   ],
+   "source": [
+    "idx = pd.Index([10, 20, 30])\n",
+    "print(idx)        # Int64Index([10, 20, 30], dtype='int64')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "5737ad10-6c58-411e-a06d-11082949f8f7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "         value\n",
+      "numbers       \n",
+      "1           10\n",
+      "2           20\n"
+     ]
+    }
+   ],
+   "source": [
+    "arrays = [\n",
+    "    ['A', 'A', 'B', 'B'],\n",
+    "    [1, 2, 1, 2]\n",
+    "]\n",
+    "idx = pd.MultiIndex.from_arrays(arrays, names=('letters', 'numbers'))\n",
+    "df = pd.DataFrame({'value': [10, 20, 30, 40]}, index=idx)\n",
+    "\n",
+    "slicer = pd.IndexSlice\n",
+    "print(df.loc[slicer['A', :]])  # Select all rows with 'A'\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "3035c3e8-92c8-4012-a98d-3622e45ee075",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "int_col        int64\n",
+      "float_col    float64\n",
+      "str_col       object\n",
+      "dtype: object\n"
+     ]
+    }
+   ],
+   "source": [
+    "df = pd.DataFrame({\n",
+    "    \"int_col\": [1, 2, 3],\n",
+    "    \"float_col\": [1.1, -2.2, 3.3],\n",
+    "    \"str_col\": [\"a\", \"b\", \"c\"]\n",
+    "})\n",
+    "print(df.dtypes)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "1243557e-1f3a-455d-a454-90bf84f7ff83",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "IntervalIndex([(0, 2], (2, 4], (4, 6], (6, 8], (8, 10]], dtype='interval[int64, right]')\n"
+     ]
+    }
+   ],
+   "source": [
+    "np.asfortranarray\n",
+    "intervals = pd.interval_range(start=0, end=10, freq=2)\n",
+    "print(intervals)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "d6c82415-6f0a-400a-8db7-77e4b544547d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0       1\n",
+      "1       2\n",
+      "2    <NA>\n",
+      "dtype: Int32\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = pd.Series([1, 2, pd.NA], dtype=pd.Int32Dtype())\n",
+    "print(s)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "618c57c4-75b5-4113-9e25-cbed5a2254a6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   A  B\n",
+      "0  1  3\n",
+      "1  2  4\n"
+     ]
+    }
+   ],
+   "source": [
+    "store = pd.HDFStore('data.h5')\n",
+    "store['df'] = pd.DataFrame({\"A\":[1,2], \"B\":[3,4]})\n",
+    "print(store['df'])\n",
+    "store.close()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b148741d-6feb-419f-b9e3-dae128fd2f20",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
